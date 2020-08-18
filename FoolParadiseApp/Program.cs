@@ -41,7 +41,7 @@ namespace FoolParadiseApp
         {
             if (name == null && amount <= 0 && interest <= 0 && months <= 0)
             {
-                throw new NullReferenceException("Please enter valid values");
+                throw new ArgumentNullException("Please enter valid values");
             }
             else
             {
