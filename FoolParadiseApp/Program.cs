@@ -57,7 +57,7 @@ namespace FoolParadiseApp
             {
                 if (amount <= 0 && interest <= 0 && months <= 0) // Checks for invalid values
                 {
-                    throw new NullReferenceException("Please enter valid values");
+                    throw new ArgumentNullException("Please enter valid values");
                 }
                 else
                 {
@@ -68,7 +68,7 @@ namespace FoolParadiseApp
                     return total;
                 }
             }
-            catch (NullReferenceException ex) // throws an Exception if the values are invalid
+            catch (ArgumentNullException ex) // throws an Exception if the values are invalid
             {
                 Console.WriteLine(ex);
                 return -1;
@@ -81,7 +81,7 @@ namespace FoolParadiseApp
             {
                 if (amount <= 0 && interest <= 0 && months <= 0)
                 {
-                    throw new NullReferenceException("Please enter valid values"); // throws an exception if interest, amount months is less or equal to zero
+                    throw new ArgumentNullException("Please enter valid values"); // throws an exception if interest, amount months is less or equal to zero
                 }
                 else
                 {
@@ -90,7 +90,7 @@ namespace FoolParadiseApp
                     return netInterest; // returns the net interest
                 }
             }
-            catch (NullReferenceException ex)
+            catch (ArgumentNullException ex)
             {
                 Console.WriteLine(ex);
                 return -1;
